@@ -23,8 +23,3 @@ class Vacancy:
         salary = vac_dict["salary"]["from"] if vac_dict["salary"] else 0
         description = vac_dict["snippet"]["requirement"]
         return Vacancy(title, url, salary, description)
-
-    @staticmethod
-    def cast_to_object_list(vacancies):
-        """Преобразует список вакансий в объекты Vacancy"""
-        return [Vacancy.from_dict(vac) for vac in vacancies]
